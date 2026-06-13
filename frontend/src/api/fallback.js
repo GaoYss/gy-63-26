@@ -157,3 +157,107 @@ export const fallbackRecommendations = [
     reason: '到店批次新鲜度高，可提升复购',
   },
 ]
+
+export const fallbackDailyReport = {
+  report_date: '2026-06-13',
+  new_members: {
+    count: 2,
+    items: [
+      {
+        id: 4,
+        name: '刘婷',
+        phone: '13800000004',
+        level_id: 1,
+        created_at: '2026-06-13',
+      },
+      {
+        id: 5,
+        name: '陈强',
+        phone: '13800000005',
+        level_id: 2,
+        created_at: '2026-06-13',
+      },
+    ],
+  },
+  redeems: {
+    count: 3,
+    total_points: 2180,
+    items: [
+      {
+        id: 3,
+        member_id: 1,
+        member_name: '李明',
+        change: -680,
+        note: '兑换精品蓝莓一盒',
+        created_at: '2026-06-13 09:15',
+      },
+      {
+        id: 4,
+        member_id: 3,
+        member_name: '张伟',
+        change: -300,
+        note: '兑换10元水果券',
+        created_at: '2026-06-13 10:42',
+      },
+      {
+        id: 5,
+        member_id: 2,
+        member_name: '王芳',
+        change: -1200,
+        note: '兑换当季果篮升级',
+        created_at: '2026-06-13 14:20',
+      },
+    ],
+  },
+  presales: {
+    order_count: 4,
+    total_quantity: 8,
+    total_amount: 463.5,
+    items: [
+      {
+        id: 1,
+        member_id: 1,
+        member_name: '李明',
+        presale_id: 1,
+        presale_title: '云南高山蓝莓预售',
+        quantity: 2,
+        amount: 79.8,
+        created_at: '2026-06-13 09:30',
+      },
+      {
+        id: 2,
+        member_id: 2,
+        member_name: '王芳',
+        presale_id: 2,
+        presale_title: '海南贵妃芒礼盒',
+        quantity: 1,
+        amount: 88.0,
+        created_at: '2026-06-13 10:15',
+      },
+      {
+        id: 3,
+        member_id: 3,
+        member_name: '张伟',
+        presale_id: 1,
+        presale_title: '云南高山蓝莓预售',
+        quantity: 3,
+        amount: 119.7,
+        created_at: '2026-06-13 13:40',
+      },
+      {
+        id: 4,
+        member_id: 5,
+        member_name: '陈强',
+        presale_id: 2,
+        presale_title: '海南贵妃芒礼盒',
+        quantity: 2,
+        amount: 176.0,
+        created_at: '2026-06-13 15:20',
+      },
+    ],
+  },
+  recommendations: {
+    count: 4,
+    items: fallbackRecommendations,
+  },
+}

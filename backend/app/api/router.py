@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+from app.modules.daily_report.router import router as daily_report_router
 from app.modules.levels.router import router as levels_router
 from app.modules.members.router import router as members_router
 from app.modules.points.router import router as points_router
@@ -13,4 +14,7 @@ api_router.include_router(points_router, prefix="/points", tags=["points"])
 api_router.include_router(presales_router, prefix="/presales", tags=["presales"])
 api_router.include_router(
     recommendations_router, prefix="/recommendations", tags=["recommendations"]
+)
+api_router.include_router(
+    daily_report_router, prefix="/daily-report", tags=["daily-report"]
 )

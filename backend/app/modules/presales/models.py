@@ -37,3 +37,4 @@ class PresaleOrder(BaseModel):
     quantity: int
     amount: float
     status: str
+    created_at: str | None = None

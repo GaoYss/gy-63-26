@@ -1,3 +1,5 @@
+from datetime import date
+
 from fastapi import HTTPException
 
 from app.core.store import store
@@ -24,7 +26,11 @@ def get_member(member_id: int) -> Member:
 def create_member(payload: MemberCreate) -> Member:
     get_level(payload.level_id)
     member_id = store.next_id(store.members)
-    member = {"id": member_id, **payload.model_dump()}
+    member = {
+        "id": member_id,
+        **payload.model_dump(),
+        "created_at": date.today().strftime("%Y-%m-%d"),
+    }
     store.members[member_id] = member
     return _with_level(member)
 

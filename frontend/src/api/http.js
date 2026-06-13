@@ -1,4 +1,5 @@
 import {
+  fallbackDailyReport,
   fallbackLevels,
   fallbackMembers,
   fallbackPresales,
@@ -17,6 +18,7 @@ const fallbackGetters = [
   { test: (path) => path === '/presales', data: () => fallbackPresales },
   { test: (path) => path === '/presales/orders', data: () => [] },
   { test: (path) => path.startsWith('/recommendations'), data: () => fallbackRecommendations },
+  { test: (path) => path.startsWith('/daily-report'), data: () => fallbackDailyReport },
 ]
 
 function fallbackFor(path) {

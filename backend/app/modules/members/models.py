@@ -25,4 +25,5 @@ class MemberUpdate(BaseModel):
 
 class Member(MemberBase):
     id: int
+    created_at: str | None = None
     level: Level | None = None

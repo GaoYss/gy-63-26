@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import HTTPException
 
 from app.core.store import store
@@ -41,6 +43,7 @@ def reserve_presale(payload: PresaleOrderCreate) -> PresaleOrder:
         "quantity": payload.quantity,
         "amount": round(presale["price"] * payload.quantity, 2),
         "status": "reserved",
+        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
     }
     store.presale_orders.append(order)
     return PresaleOrder(**order)

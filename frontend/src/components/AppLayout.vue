@@ -41,6 +41,7 @@ import {
   Activity,
   BadgePercent,
   CalendarClock,
+  ClipboardList,
   Gauge,
   Gift,
   Sprout,
@@ -51,6 +52,7 @@ const route = useRoute()
 
 const navItems = [
   { to: '/', label: '经营概览', icon: Gauge },
+  { to: '/daily-report', label: '经营日报', icon: ClipboardList },
   { to: '/members', label: '会员管理', icon: Users },
   { to: '/levels', label: '会员等级', icon: BadgePercent },
   { to: '/points', label: '积分兑换', icon: Gift },
